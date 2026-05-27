@@ -1,0 +1,4 @@
+vps-python/venv/
+vps-python/.env
+client-java/target/
+vps-python/app/__pycache__/
