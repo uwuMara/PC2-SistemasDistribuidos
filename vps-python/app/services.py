@@ -200,6 +200,13 @@ def customer_debt(db: Session, customer_id: int):
             c.customer_id,
             c.first_name || ' ' || c.last_name AS customer_name,
             COUNT(r.rental_id) AS alquileres_activos,
+
+            COALESCE(
+                MAX(
+                    EXTRACT(DAY FROM NOW() - r.rental_date)::INT
+                ),
+                0
+            ) AS dias_alquilado,
             COALESCE(SUM(
                 CASE
                     WHEN r.rental_id IS NOT NULL THEN

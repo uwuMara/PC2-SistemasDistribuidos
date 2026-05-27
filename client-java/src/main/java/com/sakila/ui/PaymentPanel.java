@@ -594,6 +594,11 @@ public class PaymentPanel extends JPanel {
                 "alquileres_activos"
         );
 
+        String dias = api.extractNumber(
+        response,
+        "dias_alquilado"
+        );
+
         String monto = api.extractNumber(
                 response,
                 "monto_estimado"
@@ -606,6 +611,7 @@ public class PaymentPanel extends JPanel {
                 Customer ID: %d
 
                 Alquileres activos: %s
+                Días de alquiler acumulados: %s
                 Monto estimado pendiente: S/ %s
 
                 Cálculo aplicado:
@@ -614,6 +620,7 @@ public class PaymentPanel extends JPanel {
                 nombre,
                 customerId,
                 alquileres,
+                dias,
                 monto
         ));
 

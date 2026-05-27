@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 public class ApiClient {
 
-    private static final String BASE_URL = "http://127.0.0.1:8000";
+    private static final String BASE_URL = "http://34.60.83.185:8000";
 
     private final HttpClient client;
 
