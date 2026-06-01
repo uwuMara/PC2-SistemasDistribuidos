@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #fff4f8;
+  color: #3c2d37;
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  padding: 12px 18px;
+  background: #ad1457;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #880e4f;
+  transform: translateY(-1px);
+}
+
+input {
+  width: 100%;
+  border: 1px solid #ffcada;
+  border-radius: 14px;
+  padding: 12px 14px;
+  outline: none;
+  font-size: 14px;
+  background: #fffafd;
+}
+
+input:focus {
+  border-color: #ad1457;
+  box-shadow: 0 0 0 3px rgba(173, 20, 87, 0.12);
+}
+
+pre {
+  white-space: pre-wrap;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fff4f8, #ffe1ec);
+}
+
+.card {
+  background: white;
+  border: 2px solid #ffcada;
+  border-radius: 26px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(173, 20, 87, 0.09);
+}
+
+.login-card {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: center;
+}
+
+.login-card h1 {
+  color: #ad1457;
+  margin: 0;
+  font-size: 34px;
+}
+
+.subtitle {
+  color: #7a5064;
+  margin-top: -4px;
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #ad1457, #d81b60);
+  color: white;
+  padding: 30px 24px;
+}
+
+.sidebar h2 {
+  margin: 0 0 24px;
+  font-size: 26px;
+}
+
+.sidebar p {
+  background: rgba(255, 255, 255, 0.16);
+  padding: 16px;
+  border-radius: 18px;
+  line-height: 1.6;
+}
+
+.content {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #ad1457;
+  font-size: 21px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.result-card {
+  grid-column: span 2;
+  min-height: 260px;
+}
+
+.result-card pre {
+  background: #fffafd;
+  border: 1px solid #ffcada;
+  border-radius: 18px;
+  padding: 18px;
+  min-height: 180px;
+}
+
+@media (max-width: 850px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-radius: 0 0 28px 28px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .result-card {
+    grid-column: span 1;
+  }
+}
